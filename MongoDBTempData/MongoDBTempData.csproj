@@ -101,7 +101,7 @@
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>if $(ConfigurationName) == Release C:\nuget\NuGet.exe pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName)</PostBuildEvent>
+    <PostBuildEvent>if $(ConfigurationName) == Release $(SolutionDir)\.nuget\NuGet.exe pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
