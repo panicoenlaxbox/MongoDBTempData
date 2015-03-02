@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MongoDBTempData")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ASP.NET MVC TempData MongoDB provider")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("panicoenlaxbox")]
 [assembly: AssemblyProduct("MongoDBTempData")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
