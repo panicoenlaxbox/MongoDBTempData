@@ -18,19 +18,9 @@ namespace WebApplication1
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-    protected void Application_BeginRequest(object sender, EventArgs e)
-    {
-        var cookie = Request.Cookies["UniqueId"];
-        if (cookie != null)
+        protected void Application_BeginRequest(object sender, EventArgs e)
         {
-            return;
+            MongoDBTempDataUtilities.SetUniqueIdCookie(Request);
         }
-        cookie = new HttpCookie("UniqueId")
-        {
-            HttpOnly = true,
-            Value = Guid.NewGuid().ToString()
-        };
-        HttpContext.Current.Response.Cookies.Add(cookie);
-    }
     }
 }

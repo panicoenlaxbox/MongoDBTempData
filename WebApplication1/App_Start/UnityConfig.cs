@@ -49,7 +49,7 @@ namespace WebApplication1.App_Start
                 ConfigurationManager.AppSettings["MongoDBTempDataProviderConnectionString"],
                 ConfigurationManager.AppSettings["MongoDBTempDataProviderDatabaseName"],
                 ConfigurationManager.AppSettings["MongoDBTempDataProviderCollectionName"],
-                getUniqueId));
+                MongoDBTempDataUtilities.getUniqueId));
         }
     }
 }

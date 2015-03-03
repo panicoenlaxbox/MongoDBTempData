@@ -19,7 +19,7 @@ En mi caso he utilizado Unity para hacerlo funcionar dentro del pipeline de ASP.
 
 Será nuestra responsabilidad crear una instancia del delegado GetUniqueId para pasar al proveedor un valor único de tipo Guid que servirá para identificar a los distintos usuarios:
 
-En el ejemplo se ha optado por una cookie:
+En el ejemplo se ha optado por guardar este valor en una cookie:
 
     GetUniqueId getUniqueId = controllerContext =>
     {
@@ -43,3 +43,5 @@ Para establecer la cookie se ha agregado el siguiente código en Global.asax
         };
         HttpContext.Current.Response.Cookies.Add(cookie);
     }
+
+En el ejemplo, ambos métodos están finalmente incluidos en una clase MongoDBTempDataUtilities, siéntete libre de usarla o crear tu propia implementación para persistir y recuperar el valor de UniqueId.
